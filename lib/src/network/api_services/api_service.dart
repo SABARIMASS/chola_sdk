@@ -6,7 +6,6 @@ import 'package:cholai_sdk/src/utils/logger_util.dart';
 import 'package:get/get.dart';
 import '../api_provider.dart';
 import 'data.dart';
-// ignore: depend_on_referenced_packages
 import 'package:path/path.dart'; // For file path manipulation
 
 final ApiProvider apiProvider = GetInstance().put(ApiProvider());
