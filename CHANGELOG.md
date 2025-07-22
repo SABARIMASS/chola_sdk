@@ -33,3 +33,4 @@ All notable changes to the `cholai_sdk` Flutter package will be documented in th
 
 > This changelog follows semantic versioning. Stay tuned for new features!
 `
+## [0.0.2] - 2025-07-22

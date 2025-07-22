@@ -1,6 +1,6 @@
 name: cholai_sdk
 description: A Flutter SDK that provides socket-based chat, color theming, and user/session handling utilities.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/SABARIMASS/chola_sdk.git
 repository: https://github.com/SABARIMASS/chola_sdk.git
 license: MIT

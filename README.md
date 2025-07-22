@@ -1,6 +1,7 @@
+
 # 🧠 CholAi SDK for Flutter
 
-A plug-and-play SDK for real-time chat and AI integration, built for fast onboarding into your Flutter app.
+A plug-and-play SDK for **real-time chat** and **AI integration**, built for fast onboarding into your Flutter app.
 
 ---
 
@@ -10,22 +11,30 @@ Add the package to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  cholai_sdk: ^<latest_version>
+  cholai_sdk: ^0.0.2  # Replace with the latest version
+```
+
 Then run:
 
+```bash
 flutter pub get
-⚙️ Initialization
+```
 
-Before using any chat features, initialize the SDK:
+---
+
+## ⚙️ Initialization
+
+### Step 1: Pre-initialize the SDK in `main()`
 
 ```dart
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  CholAiSdk.preInit(); // Optional: For preparing resources
+  CholAiSdk.preInit(); // Optional: Prepares resources early
   runApp(const MyApp());
 }
+```
 
-Then call CholAiSdk.initialize once inside your app:
+### Step 2: Initialize SDK after login or user session is ready
 
 ```dart
 @override
@@ -34,13 +43,16 @@ void initState() {
   CholAiSdk.initialize(
     userId: 'your-user-id',
     fcmToken: 'your-device-fcm-token',
-    baseUrl: 'https://your-server.com', // Replace with your backend URL
+    baseUrl: 'https://your-server.com', // Replace with your backend base URL
   );
 }
+```
 
-💬 Open Chat View
+---
 
-Use this to launch the chat detail view between two users:
+## 💬 Show Chat View
+
+Use the following snippet to launch a full-screen chat view between two users:
 
 ```dart
 showModalBottomSheet(
@@ -57,10 +69,13 @@ showModalBottomSheet(
     receiverCountryCodeParam: '+91',
   ),
 );
+```
 
-📱 Example
+---
 
-Here is a minimal working app using the SDK:
+## 📱 Example App
+
+Here’s a full working example to copy and run:
 
 ```dart
 import 'package:flutter/material.dart';
@@ -68,7 +83,7 @@ import 'package:cholai_sdk/cholai_sdk.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  CholAiSdk.preInit();
+  CholAiSdk.preInit(); // Optional: Pre-initialize SDK
   runApp(const MyApp());
 }
 
@@ -135,18 +150,14 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+```
 
-📦 Features
+---
 
-🔒 Secure chat communication
-👤 User-to-user conversation view
-🔔 FCM token integration
-🎨 Fully customizable UI wrapper (upcoming)
-📣 Coming Soon
+## 📦 Features
 
-Message history with pagination
-AI reply suggestions
-In-app voice calling support
-🧑‍💻 Maintained By
-
-CholAi Team – Bringing AI-driven messaging into your app experience.
+- 🔒 Secure real-time chat  
+- 👥 One-to-one chat detail view  
+- 🔔 Firebase FCM token support  
+- 📦 Easy to plug into any app  
+- 🎨 Theming and customization *(coming soon)*  
